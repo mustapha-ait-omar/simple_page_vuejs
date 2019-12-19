@@ -1,0 +1,71 @@
+a{
+    color: unset;
+    text-decoration: none;
+}
+a:hover{
+    color: unset;
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: #343a40;
+    color: white;
+}
+.nav-link{
+    color: aliceblue;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar-brand{
+    color: aliceblue;
+}
+
+.title-page{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #686868;
+}
+.note-link{
+    margin: 2px 0;
+    font-size: 19px;
+    color: #545b62;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 2px 15px;
+    margin: 0 4px;
+}
+
+.title-note{
+    text-transform: capitalize;
+    color: #6c757d;
+    font-size: 21px;
+}
+
+.btn-nex-pre{
+    cursor: pointer;
+    background-color: #818181;
+    padding: 2px 38px;
+    color: white;
+}
+.acvtive-selected{
+    background-color: #28a745;
+    color: aliceblue;
+}
+.div-list-links{
+    height: 75vh;
+    border: 1px solid #28a745;
+    padding: 15px 15px;
+}
+.div-pr{
+    min-height: 75vh;
+    margin-top: 15px;
+}
+.note-link i{
+    position: absolute;
+    left: -18px;
+    top: 8px;
+    color: #343a40;
+}

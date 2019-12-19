@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <nav id="navbar-example2" class="navbar">
+          <div class="container">
+              <a class="navbar-brand" href="#"></a>
+              <ul class="nav m-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" @click="note = 0"> home page </a>
+                </li>
+               
+              </ul>
+          </div>    
+        </nav>
+            
+            <h3 class="py-3  title-page">learne notes music</h3>
+            
+            <section class="section-pr my-5">
+               <div class="container">
+                 <div class="row">
+                    <div class="col-md-4">
+                      <div class="div-list-links " >
+                          <h3 class="title-note">Links list </h3>
+                          <div :class="(note==1)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 1"><i v-if="note == 1" class="fas fa-chevron-right"></i> note title 1</div>
+                          <div :class="(note==2)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 2"><i v-if="note == 2" class="fas fa-chevron-right"></i> note title 2</div>
+                          <div :class="(note==3)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 3"><i v-if="note == 3" class="fas fa-chevron-right"></i> note title 3</div>
+                          <div :class="(note==4)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 4"><i v-if="note == 4" class="fas fa-chevron-right"></i> note title 4</div>
+                          <div :class="(note==5)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 5"><i v-if="note == 5" class="fas fa-chevron-right"></i> note title 5</div>
+                      </div>
+                    </div>
+                    <div class="col-md-8 div-pr">
+                      <div class="div-pr">
+                          <div v-if="note == 0" class="note-div my-5 text-center">
+                              <h3 class="title-note">start of the learn music note </h3>
+                              <div class="img-pr">
+                                <img src="img/n3.jpg" class="w-100" alt="">
+                              </div>
+                             <div>
+                                <span @click="next" class="btn-nex-pre btn my-5"> <i class="fas fa-play"></i> Start Now</span>
+                             </div>
+                          </div>
+                          <div v-else-if="note == 1" class="note-div">
+                              <h3 class="title-note">note title 1 </h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 2" class="note-div">
+                              <h3 class="title-note">note title 2</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 3" class="note-div">
+                              <h3 class="title-note">note title 3</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 4" class="note-div">
+                              <h3 class="title-note">note title 4</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 5" class="note-div">
+                              <h3 class="title-note">note title 5</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+                      </div>
+                      <div v-if="note != 0" class="btn-div">
+                        <span v-if="note < 5" @click="next"  class="btn-nex-pre btn float-right"> <i class=" fas fa-chevron-circle-right"></i></span>
+                        <span v-if="note > 1" @click="note--"class="btn-nex-pre btn float-left">  <i class="fas fa-chevron-circle-left"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+
+          </div>
+          <script src="js/vue.js"></script>
+
+          <script>
+           const app = new Vue({
+             el : "#app",
+             data : {
+               note : 0
+             },
+             methods : {
+               next : function()
+               {
+                 if(this.note < 5)
+                 {
+                   return this.note++;
+                 }
+
+               },
+               prev : function()
+               {
+                 if(this.note > 1)
+                 {
+                   return this.note--;
+                 }
+
+               }
+             }
+           })
+          
+          </script>
+            <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/backend.js"></script>
+
+  
+    
+</body>
+</html>
