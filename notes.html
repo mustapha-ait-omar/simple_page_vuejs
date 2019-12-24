@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+      <nav class="navbar navbar-expand-lg py-0">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          
+        </button>
+        <ul :style="moveclass"  class="slide-bar d-block d-md-none">
+          <span @click="methodemove()" class="icon-open"><i style="font-size: 30px;" class=" fas fa-chevron-circle-right"></i></span>
+          <h3 class="title-note">Links list </h3>
+          <a href="index.html"></a><div class="note-link home-lnk  position-relative"> Home Page <i class="fa fa-home" aria-hidden="true"></i></div></a>
+          <hr>
+          <div :class="(note==1)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 1"> note title 1 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+          <div :class="(note==2)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 2"> note title 2 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+          <div :class="(note==3)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 3"> note title 3 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+          <div :class="(note==4)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 4"> note title 4 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+          <div :class="(note==5)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 5"> note title 5 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+        </ul>
+          
+        </div>
+      </nav>
+            
+            
+            <section class="section-pr">
+                 <div class="row">
+                    <div class="col-md-4 col-12 col-lg-3">
+                      <ul class="slide-bar d-md-block d-none">
+                        <h3 class="title-note">Links list </h3>
+                        <a href="index.html"><div class="note-link home-lnk  position-relative"> Home Page <i class="fa fa-home" aria-hidden="true"></i></div></a>
+                        <hr>
+                        <div :class="(note==1)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 1"> note title 1 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                        <div :class="(note==2)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 2"> note title 2 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                        <div :class="(note==3)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 3"> note title 3 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                        <div :class="(note==4)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 4"> note title 4 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                        <div :class="(note==5)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 5"> note title 5 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                      </ul>
+                    </div>
+                    <div class="col-md-8 col-12 col-lg-9 px-sm-5 div-pr">
+                      <div class="div-pr">
+                          <div v-if="note == 1" class="note-div">
+                              <h3 class="title-note">note title 1 </h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 2" class="note-div">
+                              <h3 class="title-note">note title 2</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 3" class="note-div">
+                              <h3 class="title-note">note title 3</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 4" class="note-div">
+                              <h3 class="title-note">note title 4</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+    
+                          <div v-else-if="note == 5" class="note-div">
+                              <h3 class="title-note">note title 5</h3>
+                              <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
+                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
+                              </div>
+                          </div>
+                      </div>
+                      <div v-if="note != 0" class="btn-div">
+                        <span v-if="note < 5" @click="next"  class="btn-nex-pre btn float-right"> <i class=" fas fa-chevron-circle-right"></i></span>
+                        <span v-if="note > 1" @click="note--"class="btn-nex-pre btn float-left">  <i class="fas fa-chevron-circle-left"></i></span>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+
+
+          </div>
+          <script src="js/vue.js"></script>
+
+            <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/backend.js"></script>
+
+  
+    
+</body>
+</html>

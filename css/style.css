@@ -1,3 +1,9 @@
+img{
+    width: 100%;
+}
+body{
+    color: #545454;
+}
 a{
     color: unset;
     text-decoration: none;
@@ -8,12 +14,11 @@ a:hover{
 }
 
 .navbar{
-    background-color: #343a40;
+    background-color: #ffc107;
     color: white;
 }
 .nav-link{
     color: aliceblue;
-    font-size: 26px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -25,12 +30,12 @@ a:hover{
     text-align: center;
     text-transform: capitalize;
     text-decoration: underline;
-    color: #686868;
+    color: #fff;
 }
 .note-link{
     margin: 2px 0;
     font-size: 19px;
-    color: #545b62;
+    color: #fff;
     font-weight: 600;
     text-transform: capitalize;
     cursor: pointer;
@@ -46,26 +51,193 @@ a:hover{
 
 .btn-nex-pre{
     cursor: pointer;
-    background-color: #818181;
+    background-color: #2b2f32;
     padding: 2px 38px;
     color: white;
 }
 .acvtive-selected{
-    background-color: #28a745;
+    background-color: #ffc107;
     color: aliceblue;
 }
 .div-list-links{
     height: 75vh;
-    border: 1px solid #28a745;
+    border: 1px solid #ffc107;
     padding: 15px 15px;
 }
 .div-pr{
     min-height: 75vh;
     margin-top: 15px;
 }
+
 .note-link i{
+    float: right;
+    position: relative;
+    top: 5px;
+}
+.home-lnk{
+    padding: 5px;
+    background-color: #6c757d;
+}
+hr{
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+/*
+    style index2
+*/
+.bg-1{
+    /*background-image: url(../img/bg-pr.jpg);*/
+    background-color: #28a745;
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+}
+.bg-div{
     position: absolute;
-    left: -18px;
-    top: 8px;
-    color: #343a40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d212485;
+}
+.text-1{
+    font-size: 40px;
+    font-weight: bold;
+    color: antiquewhite;
+    text-transform: capitalize;
+    text-shadow: 7px 7px 13px black;
+}
+.text-1 .inner{
+    background-color: #ffc107;
+    padding: 5px 90px;
+    font-size: 30px;
+    border-radius: 9px;
+    cursor: pointer;
+    text-shadow:none;
+    color: #226133;
+}
+
+.section1 .img-sp{
+    width: 60%;
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 3px 13px 20px 0px #000000ad;
+}
+.section1 .img-teacher{
+    width: 60%;
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.section1 .img-right span{
+    position: absolute;
+    right: 0;
+    width: 56%;
+    font-family: cursive;
+    top: 10px;
+}
+
+.section2 h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.section2{
+    font-size: 18px;
+    font-weight: 500;
+}
+.section2 .img-right img{
+    max-height: 54vh;
+    width: auto;
+    margin: 0 auto;
+    float: right;
+}
+
+.section3 h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.section3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.section3 .img-left img{
+    max-height: 54vh;
+    width: auto;
+    margin: 0 auto;
+    float: left;
+}
+
+.slide-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: 99;
+    background-color: #2b2f32;
+    height: 100vh;
+    list-style: none;
+    padding: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.icon-open{
+    position: absolute;
+    left: 87%;
+    cursor: pointer;
+    font-size: 20px;
+    top: 45vh;
+    z-index: 9;
+    background-color: #2b2f32;
+    padding: 10px 4px 6px 40px;
+    border-radius: 0px 12px 12px 0px;
+    /* width: 49px; */
+    /* height: 31px;*/
+}
+.moveclass{
+    left: -300px;
+}
+.div-img-3{
+    height: 80vh;
+    width: auto;
+}
+.section4 .text-contant{
+    position: absolute;
+    left: 10%;
+    width: 70%;
+    margin: 0 auto;
+    top: 5%;
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: bold;
+}
+.section4 h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.section5 h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.section5{
+    font-size: 18px;
+    font-weight: 500;
+}
+.section5 .img-left img{
+    width: 100%;
+    margin: 0 auto;
+    float: left;
 }

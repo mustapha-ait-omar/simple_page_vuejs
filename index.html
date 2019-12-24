@@ -13,136 +13,174 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
 
-        <nav id="navbar-example2" class="navbar">
-          <div class="container">
-              <a class="navbar-brand" href="#"></a>
-              <ul class="nav m-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#" @click="note = 0"> home page </a>
-                </li>
-               
+    <div id="app">
+        <nav class="navbar navbar-expand-lg py-0">
+            <div class="container">
+                <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              
+            </button>
+              <ul   class="slide-bar d-none">
+                <span @click="methodemove()" class="icon-open"><i style="font-size: 30px;" class=" fas fa-chevron-circle-right"></i></span>
+                <h3 class="title-note">Links list </h3>
+                <div :class="(note==0)? 'acvtive-selected' : ''" class="note-link home-lnk  position-relative" @click="note = 0"> Home Page <i class="fa fa-home" aria-hidden="true"></i></div>
+                <hr>
+                <div :class="(note==1)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 1"> note title 1 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                <div :class="(note==2)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 2"> note title 2 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                <div :class="(note==3)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 3"> note title 3 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                <div :class="(note==4)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 4"> note title 4 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
+                <div :class="(note==5)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 5"> note title 5 <i class="fab fa-itunes-note" aria-hidden="true"></i></div>
               </ul>
-          </div>    
-        </nav>
-            
-            <h3 class="py-3  title-page">learne notes music</h3>
-            
-            <section class="section-pr my-5">
-               <div class="container">
-                 <div class="row">
-                    <div class="col-md-4">
-                      <div class="div-list-links " >
-                          <h3 class="title-note">Links list </h3>
-                          <div :class="(note==1)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 1"><i v-if="note == 1" class="fas fa-chevron-right"></i> note title 1</div>
-                          <div :class="(note==2)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 2"><i v-if="note == 2" class="fas fa-chevron-right"></i> note title 2</div>
-                          <div :class="(note==3)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 3"><i v-if="note == 3" class="fas fa-chevron-right"></i> note title 3</div>
-                          <div :class="(note==4)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 4"><i v-if="note == 4" class="fas fa-chevron-right"></i> note title 4</div>
-                          <div :class="(note==5)? 'acvtive-selected' : ''" class="note-link position-relative" @click="note = 5"><i v-if="note == 5" class="fas fa-chevron-right"></i> note title 5</div>
-                      </div>
-                    </div>
-                    <div class="col-md-8 div-pr">
-                      <div class="div-pr">
-                          <div v-if="note == 0" class="note-div my-5 text-center">
-                              <h3 class="title-note">start of the learn music note </h3>
-                              <div class="img-pr">
-                                <img src="img/n3.jpg" class="w-100" alt="">
-                              </div>
-                             <div>
-                                <span @click="next" class="btn-nex-pre btn my-5"> <i class="fas fa-play"></i> Start Now</span>
-                             </div>
-                          </div>
-                          <div v-else-if="note == 1" class="note-div">
-                              <h3 class="title-note">note title 1 </h3>
-                              <div>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
-                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
-                              </div>
-                          </div>
-    
-                          <div v-else-if="note == 2" class="note-div">
-                              <h3 class="title-note">note title 2</h3>
-                              <div>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
-                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
-                              </div>
-                          </div>
-    
-                          <div v-else-if="note == 3" class="note-div">
-                              <h3 class="title-note">note title 3</h3>
-                              <div>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
-                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
-                              </div>
-                          </div>
-    
-                          <div v-else-if="note == 4" class="note-div">
-                              <h3 class="title-note">note title 4</h3>
-                              <div>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
-                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
-                              </div>
-                          </div>
-    
-                          <div v-else-if="note == 5" class="note-div">
-                              <h3 class="title-note">note title 5</h3>
-                              <div>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                 Quas ullam consequuntur tenetur sunt debitis porro. Nihil neque perferendis 
-                                 earum pariatur excepturi aspernatur unde eligendi obcaecati! Quisquam eaque reiciendis numquam dolor.
-                              </div>
-                          </div>
-                      </div>
-                      <div v-if="note != 0" class="btn-div">
-                        <span v-if="note < 5" @click="next"  class="btn-nex-pre btn float-right"> <i class=" fas fa-chevron-circle-right"></i></span>
-                        <span v-if="note > 1" @click="note--"class="btn-nex-pre btn float-left">  <i class="fas fa-chevron-circle-left"></i></span>
-                      </div>
-                    </div>
+            </div>
+          </nav>
+
+    <section class="section1 bg-1 text-white">
+      <div class="">
+        <div class="bg-div">
+
+        </div>
+        <div class="">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 text-1 py-5">
+                dans ce site web on va apprendre un peu a lire la musique ..!
+                <br>
+               <a href="notes.html" class="spr-border"><span class="inner">leest goo</span></a>
+              </div>
+              <div class="col-12 col-md-6 img-right my-5">
+                <div class="position-relative">
+                  <img class="img-sp" src="img/speak.jpg" alt="">
+                  <img class="img-teacher" src="img/teacher.png" alt="">
+                  <div class="text-contant">
+                       <a href="" class="typewrite" data-period="2000" 
+                       data-type='[ "Saviez-vous que la musique fait partie de ce qui rend l’homme humain?",
+                                    "De nos jours, on peut jouer diverses styles de musiques grâce aux instruments diverses.",
+                                    "Il y aussi la technologie qui offre plusieurs moyens  d’écouter de la musique à n’importe quel endroit et moment où nous sommes.",
+                                    "Les scientifiques ont récemment découvert que la musique affecte de nombreuses parties de notre cerveau très profondément.",
+                                     "Mais vous ne devez pas être un scientifique pour comprendre son importance dans notre vie."
+                                     ]'>
+                       <span class="wrap"></span>
+                       </a>
+                 </div>
+                  <div>
+
                   </div>
                 </div>
-            </section>
-
-
+              </div>
+            </div>
           </div>
-          <script src="js/vue.js"></script>
+        </div>
+      </div>
+    </section>
 
-          <script>
-           const app = new Vue({
-             el : "#app",
-             data : {
-               note : 0
-             },
-             methods : {
-               next : function()
-               {
-                 if(this.note < 5)
-                 {
-                   return this.note++;
-                 }
-
-               },
-               prev : function()
-               {
-                 if(this.note > 1)
-                 {
-                   return this.note--;
-                 }
-
-               }
-             }
-           })
-          
-          </script>
-            <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/backend.js"></script>
-
-  
     
+
+    <section class="section2 my-5 text-center">
+      <div class="container">
+        <div class="text-center my-5">
+          <h2>La musique est la clé de la créativité</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+           <div class="py-5">
+            <span>
+              La musique alimente notre créativité. Un esprit créatif a la capacité de faire des découvertes et de créer des innovations. 
+              Elle nécessite l’utilisation du cerveau qui non seulement exerce celles de créativité, mais aussi joue un rôle important côté intellectuel. 
+              La force de tous les arts, y compris l’écriture, la peinture, la danse et le théâtre ont la capacité de créer un effet similaire.
+            </span>
+           </div>
+          </div>
+          <div  class="col-12 col-md-6 img-right">
+           <center> <img src="img/section2.png" alt=""></center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3 my-5 text-center">
+      <div class="container">
+        <div class="text-center my-5">
+          <h2>La musique rend l’éducation plus agréable</h2>
+        </div>
+        <div class="row">
+          <div  class="col-12 col-md-6 img-left ">
+            <center><img src="img/section3.jpg" alt=""></center>
+          </div>
+          <div class="col-12 col-md-6">
+           <div class="py-5">
+            <span>
+              La musique peut être très engageante dans la classe et est un excellent outil pour la mémorisation. 
+              Les enfants seraient en mesure de conserver leur leçon beaucoup plus rapide grâce à la musique. Lorsqu’on apprend un instrument de musique sur une base régulière, 
+              on travaille sur des idées concrètes et de faire de petits pas pour atteindre des objectifs plus importants. 
+              Cette façon de penser organise le câblage dans notre cerveau pour commencer à regarder d’apprentissage dans une nouvelle lumière.
+            </span>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section4 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center my-5">
+              <h2>La musique est un langage</h2>
+            </div>
+            <div class="div-img-3 position-relative">
+              <img style="height: 100%;" src="img/section4.jpg" alt="">
+              <div class="text-contant">
+               
+                <a href="" class="typewrite" data-period="2000" 
+                data-type='[ "Il est un langage de tous les êtres humains. Il transcende toutes les frontières de la communication parce que nous pouvons parler et raconter des histoires à quelqu’un de l’autre côté de la planète,",
+                " même si nous ne parlons pas la même langue. Un instrument de musique vous donne la possibilité de raconter l’histoire sans paroles.Il y a des choses qu’on peut dire avec de mots, mais la musique permet de l’exprimer encore mieux"
+                              ]'>
+                <span class="wrap"></span>
+                </a>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section5 my-5 text-center">
+      <div class="container">
+        <div class="text-center my-5">
+          <h2>La musique peut créer une ambiance et vous faire sentir l’émotion</h2>
+        </div>
+        <div class="row">
+          <div  class="col-12 col-md-6 img-left pt-5">
+            <center><img src="img/section5.jpg" alt=""></center>
+          </div>
+          <div class="col-12 col-md-6 pt-5">
+           <div class="">
+            <span>
+              Écouter de la musique ou chanter nous emmène dans un voyage prolongé. Elle est la force d’une ambiance festive et permet de se divertir. 
+              La meilleure façon pour exprimer les sentiments, la colère, l’amour, la joie et d’autres sortes de sentiments est tout simplement à travers la musique. 
+              Je suis sûre que vous pouvez vous rappeler un moment où une chanson vous a fait particulièrement triste ou très excité et heureux ? 
+              Personne ne sait vraiment pourquoi ni d’où il vient, mais de nombreuses études ont montré qu’il  y a un accord dont les émotions se rapportent à certains types de musiques.
+            </span>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+    <script src="js/vue.js"></script>
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/backend.js"></script>
+ 
+
+ 
 </body>
 </html>
